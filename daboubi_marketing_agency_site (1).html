@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daboubi – Services</title>
+  <style>
+    body { background: #0d0d0d; color: gold; font-family: 'Inter', sans-serif; margin: 0; text-align: center; }
+    header { background: black; padding: 1rem; }
+    header img { height: 60px; }
+    nav { margin-top: 1rem; }
+    nav a { color: gold; text-decoration: none; margin: 0 1rem; border: 1px solid gold; padding: 0.5rem; border-radius: 5px; }
+    nav a:hover { background: gold; color: black; }
+    main { padding: 2rem; }
+    .plan { background: #1a1a1a; border: 1px solid gold; padding: 1.5rem; margin: 1rem auto; max-width: 600px; border-radius: 8px; }
+    .plan h2 { color: gold; }
+    .plan p { font-size: 1rem; }
+    .plan button, .plan a { margin-top: 1rem; padding: 0.5rem 1rem; background: gold; color: black; text-decoration: none; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; }
+    form { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="daboubi-lion-logo.png" alt="Daboubi Lion Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Our Services</h1>
+
+    <div class="plan">
+      <h2>Free Plan (1 Month)</h2>
+      <p>Perfect for startups. Completely free for a month. Submit your goals and let us help you grow fast!</p>
+      <form action="thank-you.html" method="post">
+        <button type="submit">Join for Free</button>
+      </form>
+    </div>
+
+    <div class="plan">
+      <h2>3-Month Plan - $48 (Limited offer, was $89.99)</h2>
+      <p>100% success guaranteed. We work around the clock to make you rich.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
+        <input type="hidden" name="item_name" value="Daboubi 3-Month Plan">
+        <input type="hidden" name="amount" value="48.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="return" value="thank-you.html">
+        <button type="submit">Buy Now</button>
+      </form>
+    </div>
+
+    <div class="plan">
+      <h2>1-Year Plan - $250</h2>
+      <p>Our elite service with 24/7 support and founder’s gift at year-end.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
+        <input type="hidden" name="item_name" value="Daboubi 1-Year Plan">
+        <input type="hidden" name="amount" value="250.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="return" value="thank-you.html">
+        <button type="submit">Buy Now</button>
+      </form>
+    </div>
+
+  </main>
+</body>
+</html>

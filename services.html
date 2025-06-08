@@ -2,67 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daboubi – Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daboubi | Services</title>
   <style>
-    body { background: #0d0d0d; color: gold; font-family: sans-serif; margin: 0; text-align: center; }
-    header { background: black; padding: 1rem; }
-    header img { height: 60px; }
-    nav a { color: gold; text-decoration: none; margin: 0 1rem; border: 1px solid gold; padding: 0.5rem; border-radius: 5px; }
-    nav a:hover { background: gold; color: black; }
-    main { padding: 2rem; }
-    .plan { background: #1a1a1a; border: 1px solid gold; padding: 1.5rem; margin: 1rem auto; max-width: 600px; border-radius: 8px; }
-    .plan h2 { color: gold; }
-    .plan button { margin-top: 1rem; padding: 0.5rem 1rem; background: gold; color: black; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; }
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: gold;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .quote {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .plans {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .plan {
+      background: #111;
+      border: 1px solid gold;
+      padding: 2rem;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+    .plan h2 {
+      margin-top: 0;
+    }
+    .plan form {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan input, .plan textarea, .plan select, .plan button {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: none;
+    }
+    .plan button {
+      background: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="daboubi-lion-logo.png" alt="Daboubi Lion Logo">
+    <img src="daboubi-lion-logo.gif" alt="Daboubi Logo" />
     <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <a href="index.html" target="_blank">Home</a>
+      <a href="contact.html" target="_blank">Contact</a>
     </nav>
   </header>
-  <main>
-    <h1>Our Services</h1>
-
+  <div class="quote">
+    "We trust you with choosing your plan and you trust us with making it work for you"
+  </div>
+  <div class="plans">
     <div class="plan">
-      <h2>Free Plan (1 Month)</h2>
-      <p>Completely free. Submit your info and we’ll help your brand grow fast.</p>
-      <form action="thank-you.html" method="get">
-        <button type="submit">Join for Free</button>
+      <h2>Plan 1 - FREE (1 Month)</h2>
+      <p>Perfect for getting started. Free forever, limited to one month. Basic but powerful marketing support.</p>
+      <form action="https://formspree.io/f/xgegjbqz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="needs" placeholder="Describe what you want" required></textarea>
+        <button type="submit">Get Started</button>
       </form>
     </div>
-
     <div class="plan">
-      <h2>3-Month Plan – $48</h2>
-      <p>Success guaranteed. Offer ends soon! (Was $89.99)</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
-        <input type="hidden" name="item_name" value="Daboubi 3-Month Plan">
-        <input type="hidden" name="amount" value="48.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="return" value="thank-you.html">
-        <button type="submit">Buy Now</button>
+      <h2>Plan 2 - $48 (3 Months)</h2>
+      <p><strong>LIMITED OFFER:</strong> $48 (was $89.99). 100% success guaranteed. Full team support day and night.</p>
+      <form action="https://formspree.io/f/xgegjbqz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="needs" placeholder="Describe what you want" required></textarea>
+        <select name="payment">
+          <option value="paypal">PayPal</option>
+          <option value="credit">Credit Card</option>
+        </select>
+        <button type="submit" onclick="window.open('https://www.paypal.com/paypalme/dabadibo', '_blank')">Pay & Start</button>
       </form>
     </div>
-
     <div class="plan">
-      <h2>1-Year Plan – $250</h2>
-      <p>24/7 support and a gift from the founder. Priority service.</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="dabadibo.tttt@gmail.com">
-        <input type="hidden" name="item_name" value="Daboubi 1-Year Plan">
-        <input type="hidden" name="amount" value="250.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="return" value="thank-you.html">
-        <button type="submit">Buy Now</button>
+      <h2>Plan 3 - $250 (1 Year)</h2>
+      <p>Our elite priority plan. 24/7 support, wealth promise, and a gift from the founder after one year.</p>
+      <form action="https://formspree.io/f/xgegjbqz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="needs" placeholder="Describe what you want" required></textarea>
+        <select name="payment">
+          <option value="paypal">PayPal</option>
+          <option value="credit">Credit Card</option>
+        </select>
+        <button type="submit" onclick="window.open('https://www.paypal.com/paypalme/dabadibo/250', '_blank')">Pay & Start</button>
       </form>
     </div>
-
-  </main>
+  </div>
 </body>
 </html>

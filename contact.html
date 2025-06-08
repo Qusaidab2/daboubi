@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daboubi | Contact</title>
+  <style>
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: gold;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+    input, textarea, button {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+    }
+    .icons {
+      margin-top: 1rem;
+    }
+    .icons img {
+      width: 24px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="daboubi-lion-logo.gif" alt="Daboubi Logo" />
+    <nav>
+      <a href="index.html" target="_blank">Home</a>
+      <a href="services.html" target="_blank">Services</a>
+    </nav>
+  </header>
+  <main>
+    <h1>"We would absolutely love to hear from you"</h1>
+    <form action="https://formspree.io/f/xgegjbqz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  <footer>
+    <div>Contact us any time</div>
+    <div class="icons">
+      <img src="instagram-icon.png" alt="Instagram">
+      <img src="gmail-icon.png" alt="Gmail">
+    </div>
+  </footer>
+</body>
+</html>

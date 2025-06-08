@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daboubi Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" target="_blank">
+      <img src="logo.gif" alt="Daboubi Logo" class="logo">
+    </a>
+    <nav>
+      <a href="index.html" target="_blank">Home</a>
+      <a href="services.html" target="_blank">Services</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </nav>
+  </header>
+
+  <main class="services">
+    <h1>Our Services</h1>
+    <p class="quote">"We trust you with choosing your plan and you trust us with making it work for you"</p>
+
+    <section class="plan">
+      <h2>Plan 1 – Free</h2>
+      <p>A completely free, basic one-month plan designed to grow your brand significantly.</p>
+      <form action="https://formspree.io/f/mqkrqkyr" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe your goals" required></textarea>
+        <button type="submit">Choose Plan 1</button>
+      </form>
+    </section>
+
+    <section class="plan">
+      <h2>Plan 2 – Success Plan (3 Months) - <span class="price">$48</span> <del>$89.99</del></h2>
+      <p>We guarantee success. Our team will work day and night to make your business thrive.</p>
+      <form action="https://formspree.io/f/mqkrqkyr" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe your goals" required></textarea>
+        <div id="paypal-button-container-2"></div>
+      </form>
+    </section>
+
+    <section class="plan">
+      <h2>Plan 3 – VIP Priority (1 Year) - <span class="price">$250</span></h2>
+      <p>Priority service, 24/7 connection, and a special gift at year’s end from the founder.</p>
+      <form action="https://formspree.io/f/mqkrqkyr" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe your goals" required></textarea>
+        <div id="paypal-button-container-3"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <img src="instagram-icon.png" alt="Instagram">
+      <img src="gmail-icon.png" alt="Email">
+    </div>
+    <p>&copy; 2025 Daboubi Agency. All rights reserved.</p>
+  </footer>
+
+  <script>
+    paypal.Buttons({
+      style: { layout: 'vertical' },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: '48.00' }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment completed by ' + details.payer.name.given_name);
+          window.location.href = 'thank-you.html';
+        });
+      }
+    }).render('#paypal-button-container-2');
+
+    paypal.Buttons({
+      style: { layout: 'vertical' },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: '250.00' }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment completed by ' + details.payer.name.given_name);
+          window.location.href = 'thank-you.html';
+        });
+      }
+    }).render('#paypal-button-container-3');
+  </script>
+</body>
+</html>
